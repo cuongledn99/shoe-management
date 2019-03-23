@@ -11,10 +11,18 @@
   <title>Shop Homepage - Start Bootstrap Template</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
   <!-- Custom styles for this template -->
   <link href="stylesheets/shop-homepage.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css"
+    integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+
+
 
 </head>
 
@@ -24,27 +32,60 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#">Start Bootstrap</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home
+            <a class="nav-link" href="#">TRANG CHỦ
               <span class="sr-only">(current)</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">SẢN PHẨM</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">BLOG</a>
+          </li>
+
+              <li class="nav-item active">
+                  <div class="dropdown ">
+
+              <button class="dropbtn nav-link active">GIỚI THIỆU
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                </div>
+                </div>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">MUA HÀNG - THANH TOÁN</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link btn-group open">
+              <button type="button" class="btn btn-default fas fa-search" data-toggle="dropdown" aria-expanded="false">
+              </button>
+            </a>
+            <div class="dropdown-menu" role="menu">
+              <div class="search-bar">
+                <div class="">
+                  <form class="col-md-12" action="/search">
+                    <input type="hidden" name="type" value="product">
+                    <input type="text" name="q" placeholder="Tìm kiếm...">
+                  </form>
+                </div>
+              </div>
+            </div>
           </li>
         </ul>
       </div>
+
+      <!--  menu right  -->
+
     </div>
   </nav>
 
@@ -55,17 +96,129 @@
 
       <div class="col-lg-3">
 
-        <h1 class="my-4">Shop Name</h1>
+        <h1 class="my-4">TẤT CẢ SẢN PHẨM</h1>
         <div class="list-group">
-          <a href="#" class="list-group-item">Category 1</a>
-          <a href="#" class="list-group-item">Category 2</a>
-          <a href="#" class="list-group-item">Category 3</a>
-        </div>
+          <!-- <div href="#" class="list-group-item "> <span>ÁO</span> -->
+            <div class="dropdown dropright list-group-item">
+              <a href="#" >ÁO</a>
+                <button type="button" class="btn   dropdown-toggle" data-toggle="dropdown">
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">ÁO SWEATER</a>
+                  <a class="dropdown-item" href="#">ÁO HOODIE</a>
+                  <a class="dropdown-item" href="#">ÁO KHOÁC</a>
+                  <a class="dropdown-item" href="#">ÁO THUN</a>
+                  <a class="dropdown-item" href="#">ÁO SƠMI</a>
+                </div>
+              </div>
+           
+              <div class="dropdown dropright list-group-item">
+                  <a href="#" >QUẦN</a>
+                    <button type="button" class="btn   dropdown-toggle" data-toggle="dropdown">
+                    </button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">QUẦN JOGGER</a>
+                      <a class="dropdown-item" href="#">QUẦN SKINNY</a>
+                      <a class="dropdown-item" href="#">QUẦN JEANS</a>
+                      <a class="dropdown-item" href="#">QUẦN SHORT</a>
+                      <a class="dropdown-item" href="#">QUẦN TÂY</a>
+                    </div>
+                  </div>
+           
+                  <div class="dropdown dropright list-group-item">
+                      <a href="#" >GIÀY</a>
+                        <button type="button" class="btn   dropdown-toggle" data-toggle="dropdown">
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">GIÀY SNEAKER</a>
+                          <a class="dropdown-item" href="#">GIÀY NIKE</a>
+                          <a class="dropdown-item" href="#">GIÀY ADIDAS</a>
+                          <a class="dropdown-item" href="#">GIÀY PUMA</a>
+                          <a class="dropdown-item" href="#">GIÀY CONVERSE</a>
+                        </div>
+                      </div>
 
+                      <div class="dropdown dropright list-group-item">
+                          <a href="#" >NÓN</a>
+                            <button type="button" class="btn   dropdown-toggle" data-toggle="dropdown">
+                            </button>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="#">NÓN SNAPBACK</a>
+                              <a class="dropdown-item" href="#">NÓN BUCKER</a>
+                              <a class="dropdown-item" href="#">STREETCAP</a>
+                            </div>
+                          </div>
+
+          <a href="#" class="list-group-item">BALO-CẶP CHÉO</a>
+
+          <div class="dropdown dropright list-group-item">
+              <a href="#" >PHỤ KIỆN</a>
+                <button type="button" class="btn   dropdown-toggle" data-toggle="dropdown">
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">ĐỒNG HỒ</a>
+                  <a class="dropdown-item" href="#">DÂY CHUYỀN</a>
+                  <a class="dropdown-item" href="#">VỚ</a>
+                </div>
+              </div>
+
+          <a href="#" class="list-group-item">SALE OFF</a>
+          <a href="#" class="list-group-item">DÉP-SANDAL</a>
+
+        </div>
+        
+        <!--support-->
+        <div class="sidebar-support list-group hidden-sm hidden-xs">
+            <span href="#" class="list-group-item active">
+              
+            </span>
+            <h3> Hỗ trợ trực tuyến</h3>
+            <div class="support">
+              <div class="text-center">
+                <p>
+                  <span class="supp-name">Zalo</span>
+                  <br>
+                    <span class="phone">0909569792</span>
+                  </p>
+                
+                <a href="skype:0909569792?chat" class="skype">
+                  <img src="//hstatic.net/839/1000043839/1000066304/skype-icon.png?v=281" class="img-responsive">
+                </a>
+                <a href="ymsgr:sendim?0909569792" class="yahoo">
+                  <img src="//hstatic.net/839/1000043839/1000066304/yahoo-icon.png?v=281" class="img-responsive">
+                </a>
+                
+              </div>
+              <div class="text-center">
+                
+                <span class="supp-name">Số hotline	</span>
+                
+                
+                <br>
+                  <p>
+                    0909569792
+                  </p>
+                  
+                </div>
+              <div class="text-center">
+                
+                <span class="supp-name">Thời gian làm việc	</span>
+                
+                <p>
+                  
+          9:00  -  22:00
+                </p>
+              </div>
+            </div>
+          </div>
       </div>
+
+
       <!-- /.col-lg-3 -->
 
       <div class="col-lg-9">
+
+          
 
         <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
           <ol class="carousel-indicators">
@@ -104,7 +257,9 @@
                   <a href="#">Item One</a>
                 </h4>
                 <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
+                  aspernatur!
+                </p>
               </div>
               <div class="card-footer">
                 <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
@@ -126,12 +281,65 @@
   <!-- /.container -->
 
   <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
-    </div>
-    <!-- /.container -->
-  </footer>
+  <footer>
+      <!--footer-->
+      <div id="footer-info">
+        <div class="footer-link">
+          
+          <a href="/search">Tìm kiếm</a><span> | </span>
+          
+          <a href="/pages/about-us">Giới thiệu</a>
+          
+        </div>
+        <p class="add">ADD      : Số 57D , CHƯƠNG DƯƠNG , F.LINH CHIỂU , Q.THỦ ĐỨC , TPHCM
+<br>
+HotLine : 0909.569.792
+<br>
+NGÂN HÀNG ACB CHI NHÁNH THỦ ĐỨC
+SỐ TK : 215452339 - CHỦ TK : VŨ HÀ THÀNH </p>
+        <hr>
+        <!-- Histats.com  START  (standard)-->
+        <script type="text/javascript">document.write(unescape("%3Cscript src=%27http://s10.histats.com/js15.js%27 type=%27text/javascript%27%3E%3C/script%3E"));</script><script src="http://s10.histats.com/js15.js" type="text/javascript"></script>
+        <a href="http://www.histats.com" target="_blank" title="invisible hit counter"><script type="text/javascript">
+          try {Histats.start(1,3234994,4,603,110,40,"00011000");
+          Histats.track_hits();} catch(err){};
+          </script><div id="histats_counter_6475" style="display: block;"><a href="http://www.histats.com/viewstats/?sid=3234994&amp;ccid=603" target="_blank"><canvas id="histats_counter_6475_canvas" width="113" height="43"></canvas></a></div></a>
+        <noscript><a href="http://www.histats.com" target="_blank"><img  src="http://sstatic1.histats.com/0.gif?3234994&101" alt="invisible hit counter" border="0"></a></noscript>
+        <!-- Histats.com  END  -->
+        <hr>
+        <h5>
+          <p>Copyright © 2019 Dragon Store. <a target="_blank" href="https://www.haravan.com">Powered by Haravan</a>.</p>
+        </h5>
+      </div>
+    </footer>
+
+<!-- button scroll-->
+<a href="#" class="scrollToTop" style="display: inline;">
+    <i class="fa fa-chevron-up"></i>
+  </a>
+  <script>
+      $(document).ready(function() {
+  
+        //Check to see if the window is top if not then display button
+        $(window).scroll(function() {
+          if ($(this).scrollTop() > 100) {
+            $('.scrollToTop').fadeIn();
+          } else {
+            $('.scrollToTop').fadeOut();
+          }
+        });
+  
+        //Click event to scroll to top
+        $('.scrollToTop').click(function() {
+          $('html, body').animate({
+            scrollTop: 0
+          }, 600);
+          return false;
+        });
+  
+      });
+      </script>
+
 
   <!-- Bootstrap core JavaScript -->
   <script src="js/jquery.min.js"></script>
