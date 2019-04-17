@@ -4,9 +4,15 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+var session = require('express-session');
+var passport = require('passport');
+var validator = require('express-validator')
+var flash = require('connect-flash');
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+//database declare
 require("./model/connect");
 require("./model/schema"); 
 
@@ -21,6 +27,25 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(validator());
+app.use(
+  session({
+    name: "shoes",
+    proxy: true,
+    resave: true,
+    secret: "shoe-management.secrect", // session secret
+    resave: false,
+    saveUninitialized: true,
+    cookie: {
+      secure: false /*Use 'true' without setting up HTTPS will result in redirect errors*/
+    }
+  })
+);
+app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
+require('./config/passport');
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
