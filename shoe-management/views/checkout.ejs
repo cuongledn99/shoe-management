@@ -1,9 +1,14 @@
 <!------ Include the above in your HEAD tag ---------->
+<html>
 
 <head>
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="stylesheets/shop-homepage.css" rel="stylesheet">
     <style>
         .invoice-title h2,
         .invoice-title h3 {
@@ -23,7 +28,16 @@
         }
     </style>
 </head>
-<div class="container">
+
+<body>
+
+        <% include ./partials/topnav%>
+
+<div  class="container" id='inform' style="display: none">
+    Trà sữa Trai làm đã nhận được order của bạn, vui lòng đợi giao hàng
+</div>
+<div class="container" id='container'>
+
     <div class="row">
         <div class="col-xs-12">
             <div class="invoice-title">
@@ -73,7 +87,7 @@
                     <%})} else{ 
                         pickedShoes.map((item,index)=>{
                         %>
-                       
+
                     <tr>
                         <td><%- item.name%></td>
                         <td class="text-right"><%- item.price%></td>
@@ -89,5 +103,55 @@
             </div>
         </div>
     </div>
+
+    <div class="row" style="padding-left: 4%">
+        <div class="col-6">
+            <div class="form-group row">
+                <label class="col-3 col-form-label pr-0">Họ tên</label>
+                <div class="col-8" style="width: 40%;">
+                    <input name="username" type="text" class="form-control pl-0" data-focus=" Username" value="">
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group row">
+                <label class="col-3 col-form-label pr-0">Số điện thoại</label>
+                <div class="col-8" style="width: 40%;">
+                    <input name="username" type="text" class="form-control pl-0" data-focus=" Username" value="">
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group row">
+                <label class="col-3 col-form-label pr-0">Địa chỉ</label>
+                <div class="col-8" style="width: 40%;">
+                    <input name="username" type="text" class="form-control pl-0" data-focus=" Username" value="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <button class="btn btn-primary" onclick="order()" style="
+    height: 40px;
+">Đặt hàng</button>
 </div>
+
 </div>
+
+<!-- Bootstrap core JavaScript -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<% include ./partials/footer%>
+
+<script>
+
+    const order = () => {
+
+        $('#container').attr('style', 'display:none');
+        $('#inform').attr('style', 'display:block');
+    }
+</script>
+</body>
+
+</html>
